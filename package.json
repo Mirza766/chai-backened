@@ -2,7 +2,7 @@
   "name": "chaibackened",
   "version": "1.0.0",
   "description": "a backened at chai aur code channel - youtube",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
@@ -15,6 +15,7 @@
   "author": "\"Mirza\"",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2"
   }
 }
