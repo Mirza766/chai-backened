@@ -2,7 +2,7 @@
 
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
-
+import express from "express";
 // import mongoose from "mongoose";
 // import { DB_NAME } from "./constants";
 
@@ -10,6 +10,7 @@ dotenv.config({
     path: './env'
 })
 
+const app = express();
 
 connectDB()
 
@@ -17,10 +18,10 @@ connectDB()
     app.listen(process.env.PORT || 8000,()=>{
         console.log(`Server is running at ${process.env.PORT}`);
     })
-    // app.on("error",(error)=>{
-    //     console.log("ERRR: ",error);
-    //     throw error
-    // })
+    app.on("error",(error)=>{
+        console.log("ERRR: ",error);
+        throw error
+    })
 })
 
 .catch((err)=>{
